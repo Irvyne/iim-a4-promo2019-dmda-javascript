@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+    <h1 id="message">Hello World!</h1>
+    <p>Lipsum!!</p>
+
+    <ul>
+        <li><a href="#">Google.fr</a></li>
+        <li><a href="#">Google.com</a></li>
+        <li><a href="#">Google.se</a></li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var age = prompt("Votre age:");
+        var message = $("#message");
+
+        message.on("click", function () {
+            console.log("click");
+        });
+
+        if (age < 18) {
+            message.text("Vous avez - de 18 ans.");
+            message.css("color", "red");
+        } else if (age == 18) {
+            message.text("Vous avez 18 ans.");
+            message.css("color", "blue");
+        } else {
+            message.text("Vous avez plus de 18 ans.");
+            message.css("color", "purple");
+        }
+    </script>
+</body>
+</html>
